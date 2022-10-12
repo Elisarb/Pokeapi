@@ -64,6 +64,61 @@ body{
     left:15px;
 }
 
+.fire-background{
+    background-image: url("fire-gif.gif");
+}
+.water-background{
+    background-image: url("water-gif.gif");
+}
+
+.grass-background{
+    background-image: url("grass-gif.gif");
+    background-size:cover;
+}
+
+.air-background{
+    background-image: url("air-gif.gif");
+}
+
+.bug-background{
+    background-image: url("bug-gif.gif");
+}
+
+.poison-background{
+    background-image: url("poison-gif.gif");
+}
+
+.electricity-background{
+    background-image: url("electricity-gif.gif");
+}
+
+.ground-background{
+    background-image: url("ground-gif.gif");
+}
+
+.fairy-background{
+    background-image: url("fairy-gif.gif");
+}
+
+.fighting-background{
+    background-image: url("fighting-gif.gif");
+}
+
+.psychic-background{
+    background-image: url("psychic-gif.gif");
+    background-size: cover;
+}
+
+.rock-background{
+    background-image: url("rock-gif.gif");
+    background-size: cover;
+}
+
+.ghost-background{
+    background-image: url("ghost-gif.gif");
+}
+
+
 #lol{
     display:flex;
     flex-wrap:wrap;
@@ -126,6 +181,7 @@ body{
     #000000 67%,
     #ff2020 100%
   );
+  font-weight: bolder;
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;

@@ -65,7 +65,7 @@ function crearPokemon(pokemon){
     imgContainer.classList.add("img-container");
 
     const pokeImage = document.createElement("img");
-    pokeImage.setAttribute("src", pokemon.sprites.front_default)
+    pokeImage.setAttribute("src", pokemon.sprites.other.dream_world.front_default)
     pokeImage.classList.add("imagen");
 
     const name = document.createElement("h3");
@@ -111,7 +111,7 @@ function crearPokemon(pokemon){
 
     document.getElementById("lol").appendChild(flipCard);
     
-    
+    fondosPorTipo(pokemon,card);
 
 }
 
@@ -122,7 +122,7 @@ async function traerTipos(type) {
     var res = await fetch("https://pokeapi.co/api/v2/type/" + type);
     var data = await res.json();
 
-    for (let i=0;i <= 50; i++){
+    for (let i=0;i <= 20; i++){
         var res2 = await fetch(data.pokemon[i].pokemon.url);
         var data2 = await res2.json();
         crearPokemon(data2);
@@ -135,6 +135,36 @@ function eliminarAnterior(){
     while (document.getElementById("lol").firstChild) {
         document.getElementById("lol").firstChild.remove()
 }
+}
+
+function fondosPorTipo(thing,fondo){
+    if (thing.types[0].type.name =="fire"){
+        fondo.classList.add("fire-background");
+    }if (thing.types[0].type.name =="water"){
+        fondo.classList.add("water-background");
+    }if (thing.types[0].type.name =="grass"){
+        fondo.classList.add("grass-background");
+    }if (thing.types[0].type.name =="flying"){
+        fondo.classList.add("air-background");
+    }if (thing.types[0].type.name =="bug"){
+        fondo.classList.add("bug-background");
+    }if (thing.types[0].type.name =="poison"){
+        fondo.classList.add("poison-background");
+    }if (thing.types[0].type.name =="electric"){
+        fondo.classList.add("electricity-background");
+    }if (thing.types[0].type.name =="ground"){
+        fondo.classList.add("ground-background");
+    }if (thing.types[0].type.name =="fairy"){
+        fondo.classList.add("fairy-background");
+    }if (thing.types[0].type.name =="fighting"){
+        fondo.classList.add("fighting-background");
+    }if (thing.types[0].type.name =="psychic"){
+        fondo.classList.add("psychic-background");
+    }if (thing.types[0].type.name =="rock"){
+        fondo.classList.add("rock-background");
+    }if (thing.types[0].type.name =="ghost"){
+        fondo.classList.add("ghost-background");
+    }
 }
 
 function flip (){
